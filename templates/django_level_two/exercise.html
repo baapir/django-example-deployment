@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users List Show</title>
+</head>
+<body>
+<h1>here we want to show you all our user!!!!!!</h1>
+{% if all_user_info %}
+<p>all_user_info is found</p>
+<ol>
+{% for data in all_user_info %}
+user:<br>
+    <li>user first name: {{data.FirstName}}</li>
+    <li>user last name: {{data.LastName}}</li>
+    <li>user email: {{data.Email}}</li>
+</ol>
+{% endfor %}
+{% else %}
+<p>all_user_info not found</p>
+{% endif %}
+</body>
+</html>

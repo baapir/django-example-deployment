@@ -1,0 +1,22 @@
+{% extends 'django_level_five/base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    {% if registered %}
+    <h1>thank u for ur registration!!!</h1>
+    {% else %}
+    <h1>register here</h1>
+    <h3>fill out the form</h3>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {{ uform.as_p }}
+        {% if upform %}
+        {{ upform.as_p }}
+        {% else %}
+        <p>this is for debuging!! the problem is with view</p>
+        {% endif %}
+        {% csrf_token %}
+        <input type="submit" value="submit">
+    </form>
+    {% endif %}
+</div>
+
+{% endblock %}

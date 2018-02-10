@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Level two</title>
+</head>
+<body>
+<h1>in this page we want to show all web pages and their access record:</h1>
+{% if acc_record %}
+<p>acc is found </p>
+<table>
+    <thead>
+     <th>Web Page</th>
+     <th>Date</th>
+    </thead>
+    {% for data in acc_record %}
+     <tr>
+         <td id="first">{{data.name}}</td>
+         <td>{{data.date}}</td>
+     </tr>
+    {% endfor %}
+</table>
+{% else %}
+ <p>sorry no access record found</p>
+{% endif %}
+</body>
+</html>

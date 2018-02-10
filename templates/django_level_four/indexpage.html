@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends 'django_level_four/base.html' %}
+{% block body_block %}
+
+<h1>here is the index page!!</h1>
+<p>it is a practise fo relative url!!so i create 3 pages and use the link dynamicly in ancher tags</p>
+<ol>
+    <li><a href="{% url 'django_level_four:secondindex' %}">Link to the second index page!</a></li>
+    <li><a href="{% url 'django_level_four:thirdindex' %}">Link to the third index page!</a></li>
+</ol>
+<h1>here is about filters</h1>
+<p>here is number {{number}}</p>
+<p>here is where i use |add"99" filter {{ number|add:"99" }}</p>
+<p>here is string {{data}}</p>
+<p>here is where i use |upper filter {{ data|upper }}</p>
+{% endblock %}

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first temp</title>
+    <link rel="stylesheet" href="{% static 'django_level_one/css/firsttemp.css' %}">
+</head>
+<body>
+  <h1>this is first temp page that i learn to create</h1>
+  <h3>here is injection {{inject_me}}</h3>
+  <h3>we want to load static file so we decided to show a pic down here:</h3>
+  <img src="{% static 'django_level_one/images/5440.jpg' %}" alt="" width="100" height="100">
+</body>
+</html>
